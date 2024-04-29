@@ -5,17 +5,23 @@
       <property name="tag" value="@since"/>
       <property name="tokens"
                 value="INTERFACE_DEF, CLASS_DEF, ENUM_DEF, ANNOTATION_DEF, RECORD_DEF, METHOD_DEF" />
+      <property name="tagFormat" value="[1-9\.]"/>
+      <property name="tagSeverity" value="ignore"/>
     </module>
   </module>
 </module>
 */
+package com.puppycrawl.tools.checkstyle.checks.javadoc.writetag;
 
 // xdoc section -- start
 /**
-* Some class
-*/
-public class Test { // violation as required tag is missed
-  /** some doc */
-  void foo() {} // violation as required tag is missed
+ * Some class
+ * @since 1.2
+ */
+public class Example4 {
+    /** some doc
+     * @since
+     */
+    void foo() {}
 }
 // xdoc section -- end
